@@ -1,10 +1,10 @@
 /*
-    GLOBAL CSS for project COUNT.BLMS.FR
+    GLOBAL CSS for project COUNTER.BLMS.FR
 
     Made by: Erostate
-    Date: 2024-02-09
+    Date: 2024-02-13
     Version: 1.0.0
-    URI: https://count.blms.fr
+    URI: https://counter.blms.fr
 
     License: BLMS
     License URI: https://blms.fr/license
@@ -114,7 +114,11 @@ main {
     cursor: pointer;
     color: rgb(197, 255, 250);
 }
-.container .content .list-name-wrapper .fa-trash.trash-unavailable {
+.container .content .list-name-wrapper.name-no-save h1 {
+    cursor: not-allowed;
+    color: rgb(99, 129, 127);
+}
+.container .content .list-name-wrapper.name-no-save .fa-trash {
     cursor: not-allowed;
     color: rgb(99, 129, 127);
 }
@@ -126,6 +130,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    gap: 5px;
 }
 .container .btn {
     font-size: 25px;
@@ -154,8 +159,8 @@ input:focus {
 }
 input:disabled {
     background: #001524;
-    border-bottom: solid 3px rgb(77, 116, 113);
-    border-left: solid 3px rgb(77, 116, 113);
+    border-bottom: solid 3px rgb(49, 141, 95);
+    border-left: solid 3px rgb(49, 141, 95);
     transition: all 0.15s ease-in-out;
     cursor: not-allowed;
 }
@@ -174,32 +179,37 @@ button:hover {
     background: #001524;
     transition: all 0.25s ease-in-out;
 }
+.big-btn {
+    font-size: 15px;
+}
+.btn-danger {
+    border: solid 1px #f44336;
+    color: #f44336;
+}
 
-section.history {
+section.score {
     background: #00233B;
     width: 80%;
     border-radius: 0.4rem;
     padding: 20px;
 }
 @media screen and (min-width: 900px) {
-    section.history {
+    section.score {
         width: 700px;
     }
 }
-section.history .preview {
-    cursor: pointer;
+section.score .title-score {
+    margin-bottom: 10px;
+}
+section.score .row {
     width: calc(100% - 20px);
-    margin-top: 10px;
+    margin-top: 3px;
     padding: 10px;
     border: solid 2px #013255;
     border-radius: 0.3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: all 0.15s ease-in-out;
-}
-section.history .preview:hover {
-    background: #001c30;
     transition: all 0.15s ease-in-out;
 }
 

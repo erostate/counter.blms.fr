@@ -17,56 +17,60 @@
             <div class="header">
                 <h1>Death counter</h1>
                 <span>
-                    
+                    <h2>Most death</h2>
+                    <p>Manji - 20 death</p>
                 </span>
             </div>
             <hr>
             <div class="content" id="nameList">
                 <h3>Name list</h3>
                 <br>
-                <span class="list-name-wrapper" id="name1_container">
+                <span class="list-name-wrapper name-no-save" id="name1_container">
                     <span>
                         <input type="text" id="name1" placeholder="Name 1">
-                        <button>SAVE</button>
+                        <button id="name1_button" onclick="saveName(1)">SAVE</button>
                     </span>
-                    <h1>0</h1>
-                    <i class="fa-solid fa-trash trash-unavailable"></i>
-                </span>
-                <span class="list-name-wrapper" id="name2_container">
-                    <span>
-                        <input disabled type="text" id="name2" placeholder="Name 2" value="Coucou">
-                        <button>EDIT</button>
+                    <span id="name1_scoreContainer">
+                        <h1>0</h1>
                     </span>
-                    <h1>0</h1>
                     <i class="fa-solid fa-trash"></i>
                 </span>
-                <input type="text" id="name3" placeholder="Name 3">
-                <input type="text" id="name4" placeholder="Name 4">
-                <!-- <span class="list-name-wrapper" id="name5_container">
-                    <input type="text" id="name5" placeholder="Name 5">
-                    <i class="fa-solid fa-xmark"></i>
-                </span> -->
+                <span class="list-name-wrapper name-no-save" id="name2_container">
+                    <span>
+                        <input type="text" id="name2" placeholder="Name 2">
+                        <button id="name2_button" onclick="saveName(2)">SAVE</button>
+                    </span>
+                    <span id="name2_scoreContainer">
+                        <h1>0</h1>
+                    </span>
+                    <i class="fa-solid fa-trash"></i>
+                </span>
                 <button onclick="addRowName();" id="addName" class="btn-add-row">Add row</button>
             </div>
             <div class="generate">
-                <button onclick="generateTeam();" class="btn">Generate</button>
+                <button onclick="generateTeam();" class="btn">Reset score</button>
+                <button onclick="generateTeam();" class="btn btn-danger">Reset all</button>
             </div>
             <!-- <p>Does not have an account ? <a href="/register">Register now</a></p> -->
         </section>
 
-        <section class="history" id="historyGeneration">
-            <h1>History</h1>
-            <!-- <div class="preview" onclick="openHistory()">
-                <div>
-                    <p><b id="historyNbTeam">3</b> teams</p>
-                </div>
-                <div>
-                    <p><b id="historyNbName">7</b> people</p>
-                </div>
-                <div>
-                    <p><b id="historyDate">2024-02-09</b></p>
-                </div>
-            </div> -->
+        <section class="score" id="scoreGeneration">
+            <h1 class="title-score">Score - Top 3</h1>
+            <div class="row">
+                <h2>#1</h2>
+                <h2>Name</h2>
+                <h2>0 death</h2>
+            </div>
+            <div class="row">
+                <h3>#2</h3>
+                <h3>Name</h3>
+                <h3>0 death</h3>
+            </div>
+            <div class="row">
+                <h4>#3</h4>
+                <h4>Name</h4>
+                <h4>0 death</h4>
+            </div>
         </section>
     </main>
     
